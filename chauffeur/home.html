@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="CSS/normalise.css">
+<link rel="stylesheet" type="text/css" href="CSS/header.css">
+<link rel="stylesheet" type="text/css" href="CSS/datetimepicker.css">
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Teko:wght@500&display=swap" rel="stylesheet">
+<title>Chauffeur Heroes</title>
+</head>
+
+<header>
+<h1>Anytime Chauffeurs</h1>
+
+<p>
+    The most reliable and efficient chauffering service in the U.K.
+</p>
+<div id="bookingPanel">
+    <div id="bookingWrap">
+        <form action="example-test.com">    
+            <fieldset>
+               <legend>Book A Journey</legend>
+                <div>
+                    <label for="service">Select service</label>  
+                        <select id="service" placeholder="Service" name="service">
+                            <option value="oneway">One Way</option>
+                            <option value="hourly">Hourly</option>
+                            <option value="bespoke">Bespoke</option>
+                        </select>
+                </div>      
+                <div>
+                    <label for="pickup">Pick up location</label>
+                        <input type="text" placeholder="Location" id="pickup" name="pickup">  
+                </div>  
+                <div>
+                    <label for="destination">Destination</label>
+                        <input type="text" placeholder="Destination" id="destination" name="destination">
+                </div>
+                <div id="pickUpDateAndTime">
+                    <label for="pickUpDateAndTime">Pick up date and time</label>
+                        <input type="datetime-local" placeholder="Pick up date and time" id="pickUpDateAndTime" name="pickUpDateAndTime">
+                </div>
+                <div>
+                    <button type="submit" value="Book" class="bookNow" >Book</button>
+               </div>
+            </fieldset>
+        </form>    
+    </div>
+</div>
+</header>
+<body>
+<section>
+    <img src="CSS/images/Corporate-booking.jpg">
+</section>
+<section>
+    <img src="CSS/images/get-in.jpg">
+</section>
+</body>
+
+<footer>
+</footer>
+<script type="text/Javascript" src="functions.js"></script>
+<script src="jquery.js"></script>
+
+</html>
