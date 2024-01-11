@@ -1,61 +1,116 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<link rel="stylesheet" type="text/css" href="CSS/normalise.css">
-<link rel="stylesheet" type="text/css" href="CSS/header.css">
-<link rel="stylesheet" type="text/css" href="CSS/datetimepicker.css">
-<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Teko:wght@500&display=swap" rel="stylesheet">
-<title>Chauffeur Heroes</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="CSS/normalise.css">
+    <link rel="stylesheet" type="text/css" href="CSS/header.css">
+    <link rel="stylesheet" type="text/css" href="CSS/datetimepicker.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@500&display=swap" rel="stylesheet">
+    <title>Chauffeur Heroes</title>
 </head>
-
-<header>
-<h1>Anytime Chauffeurs</h1>
-
-<p>
-    The most reliable and efficient chauffering service in the U.K.
-</p>
-<div id="bookingPanel">
-    <div id="bookingWrap">
-        <form action="example-test.com">    
-            <fieldset>
-               <legend>Book A Journey</legend>
-                <div>
-                    <label for="service">Select service</label>  
-                        <select id="service" placeholder="Service" name="service">
-                            <option value="oneway">One Way</option>
-                            <option value="hourly">Hourly</option>
-                            <option value="bespoke">Bespoke</option>
-                        </select>
-                </div>      
-                <div>
-                    <label for="pickup">Pick up location</label>
-                        <input type="text" placeholder="Location" id="pickup" name="pickup">  
-                </div>  
-                <div>
-                    <label for="destination">Destination</label>
-                        <input type="text" placeholder="Destination" id="destination" name="destination">
-                </div>
-                <div id="pickUpDateAndTime">
-                    <label for="pickUpDateAndTime">Pick up date and time</label>
-                        <input type="datetime-local" placeholder="Pick up date and time" id="pickUpDateAndTime" name="pickUpDateAndTime">
-                </div>
-                <div>
-                    <button type="submit" value="Book" class="bookNow" >Book</button>
-               </div>
-            </fieldset>
-        </form>    
-    </div>
-</div>
-</header>
 <body>
-<section>
-    <img src="CSS/images/Corporate-booking.jpg">
-</section>
-<section>
-    <img src="CSS/images/get-in.jpg">
-</section>
+    <section id="banner">
+        <header>
+            <nav id="navbar">
+                <div id="logo-container">
+                    <a id="logo"> <img src="CSS/images/logo.jpg"></a>
+                    <h1 id="section1-header">Anytime Chauffeurs</h1>
+                </div>
+                <div id="navbar-items">
+                    <a><h2>Home</h2></a>
+                    <a><h2>Book</h2></a>
+                    <a><h2>Contact us</h2></a>
+                    <a><h2>About</h2></a>
+                </div>
+            </nav>
+        </header>
+        
+        <h2 id="section1-subheader">
+            The most reliable and efficient chauffering service in the UK
+        </h2>
+        <div id="bookingPanel">
+                <form>    
+                    <fieldset>
+                       <legend>Book A Journey</legend>
+                        <div class="form-objects">
+                            <label for="service">Select service</label>  
+                                <select id="service" placeholder="Service" name="service">
+                                    <option value="oneway">One Way</option>
+                                    <option value="hourly">Hourly</option>
+                                    <option value="bespoke">Bespoke</option>
+                                </select>
+                        </div>      
+                        <div class="form-objects">
+                            <label for="pickup">Pick up location</label>
+                                <input type="text" placeholder="Location" id="pickup" name="pickup">  
+                        </div>  
+                        <div class="form-objects">
+                            <label for="destination">Destination</label>
+                                <input type="text" placeholder="Destination" id="destination" name="destination">
+                        </div>
+                        <div class="form-objects" id="pickUpDateAndTime">
+                            <label for="pickUpDateAndTime">Pick up date and time</label>
+                                <input type="datetime-local" placeholder="Pick up date and time" id="pickUpDateAndTime" name="pickUpDateAndTime">
+                        </div>
+                        <div class="form-objects">
+                            <button class="bookNow" >Book</button>
+                       </div>
+                    </fieldset>
+                </form>
+        </div>
+    </section>
+    <section id="section2">
+        <h1 id="section2-header">Select Your Vehicle</h1>
+        <div id="car-grid">
+            <div id="car-container">
+                <img id="car-image" src="">
+                <h3 id="car-model">Mercedes Benz E class</h3>
+                <p class="car-price-spacing">
+                    <span>Hourly rate (minimum 3 hours)</span> <span>£<span id="hourly-rate" value=""></span></span>
+                </p>
+                <p class="car-price-spacing">
+                    <span>Daily rate (8 hours)</span> <span>£<span id="daily-rate" value=""></span></span>
+                </p>
+                <p class="car-price-spacing">
+                    <span>Heathrow to Central London</span> <span>£<span id="airport-rate" value=""></span></span>
+                </p>
+                <button id="book-now">Book Now</button>
+            </div>
+            <div id="car-container">
+                <img id="car-image" src="">
+                <h3 id="car-model">Mercedes Benz E class</h3>
+                <p class="car-price-spacing">
+                    <span>Hourly rate (minimum 3 hours)</span> <span>£<span id="hourly-rate" value=""></span></span>
+                </p>
+                <p class="car-price-spacing">
+                    <span>Daily rate (8 hours)</span> <span>£<span id="daily-rate" value=""></span></span>
+                </p>
+                <p class="car-price-spacing">
+                    <span>Heathrow to Central London</span> <span>£<span id="airport-rate" value=""></span></span>
+                </p>
+                <button id="book-now">Book Now</button>
+            </div>
+            <div id="car-container">
+                <img id="car-image" src="">
+                <h3 id="car-model">Mercedes Benz E class</h3>
+                <p class="car-price-spacing">
+                    <span>Hourly rate (minimum 3 hours)</span> <span>£<span id="hourly-rate" value=""></span></span>
+                </p>
+                <p class="car-price-spacing">
+                    <span>Daily rate (8 hours)</span> <span>£<span id="daily-rate" value=""></span></span>
+                </p>
+                <p class="car-price-spacing">
+                    <span>Heathrow to Central London</span> <span>£<span id="airport-rate" value=""></span></span>
+                </p>
+                <button id="book-now">Book Now</button>
+            </div>
+        </div>
+    </section>
+    <section id="section3">
+    
+    </section>
 </body>
 
 <footer>

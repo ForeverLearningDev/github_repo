@@ -1,74 +1,261 @@
+/* PAGE LAYOUT - MAIN FONT */
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
 html{
-    white-space: normal;
+    white-space:normal;
     font-family: 'Teko', sans-serif;
     font-size: 1.2em;
-    color:rgb(255, 255, 255);
-    position:relative;
+    color:rgb(0, 0, 0);
+    width: 100%;
+    height: 100%;
 }
+
+/* HEADER AND NAVIGATION BAR */
 header{
-    background-image:url("images/banner.jpg");
-    height:700px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    position:relative;
-    margin-bottom: 4em;
+    position: relative;
+    display: block;
+    background-color: rgb(255, 255, 255);
+    background-blend-mode: overlay;
+    min-width: 100%;
+    height: fit-content;
 }
+
+/* LOGO AND NAME */
+#logo-container {
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#logo-container:hover {
+    cursor: pointer;
+}
+
+#logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+}
+
 h1{
     font-family:'Teko', sans-serif;
     font-style: italic;
-    font-size: 4em;
+    font-size: 2em;
     text-align: center;
-    margin-bottom: 0.1em;
-    margin-top:0.1em;
+    margin: 0px 0px 0px 10px;
+    min-width: fit-content;
 }
-header p{
-    margin-top:0.2em;
-    margin-bottom:0.2em;
+
+/* NAVIGATION OPTIONS */
+#navbar-items h2{
+    margin: 0;
+}
+
+#navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#navbar-items {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    gap: 0px 100px;
+    justify-items: center;
+}
+
+
+#navbar-items a:hover {
+    border-bottom: solid rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+/* NAVIGATION BAR RESPONSIVENESS */
+@media (max-width:780px){
+    #navbar-items {
+        grid-template-columns: repeat(3, 100px);
+    }
+}
+
+@media (max-width:600px){
+    #navbar-items {
+        grid-template-columns: repeat(2, 100px);
+    }
+}
+
+/* HERO BANNER */
+#banner{
+    position: relative;
+    height: 700px;
+    background-size: cover;
+    background-image:url("images/mercedes-s-class.jpg");
+    background-repeat: no-repeat;
+    background-position:center;
+    background-color: rgba(0, 0, 0, 0.164);
+    background-blend-mode: overlay;
+    width: 100%;
+}
+
+#section1-subheader{
+    position: inherit;
+    justify-content: center;
+    margin: 0px;
     font-family: 'Teko', sans-serif;
     font-size: 2em;
     text-align: center;
     font-style: italic;
-}
-legend{
-    font-size: 2em;
-}
-header div{
-    display: block;
-    text-align: center;
+    color: white;
+    text-shadow: 0px 0px 2px rgb(0, 0, 0), 0px 0px 2px rgb(0, 0, 0);
 }
 
-fieldset{
-    display:inline-flex;
-    flex:2em 2em auto;
-    width:1140px;
-    box-shadow: 5px 5px 10px grey;
-}
-fieldset input{
-    height:2em;
-    width:90%;
-    border:0.2em solid black;
-    border-radius: 10px;
-    box-shadow: 5px 5px 8px black;
-}
-fieldset select{
-    height:2.5em;
-    width:70%;
-    border:0.2em solid black;
-    border-radius: 10px;
-    box-shadow: 5px 5px 8px black;
-}
-fieldset button{
-    height: 1.2em;
-    background-color: white;
-    font-family:'Teko', sans-serif;
-    font-size: 2em;
-    border-radius:1em;
-    position:absolute;
-    bottom:0.5em;
-}
-
-#bookingPanel #bookingWrap{
+/* BOOKING FORM */
+#bookingPanel{
     position:absolute;
     bottom:-2em;
     width:100%;
+}
+
+form {
+    margin: 0 auto;
+    width: fit-content;
+}
+
+legend{
+    font-size: 2em;
+    color: white;
+    text-shadow: 0px 0px 2px rgb(0, 0, 0), 0px 0px 2px rgb(0, 0, 0);
+}
+
+fieldset{
+    position: inherit;
+    display:flex;
+    flex-direction: row;
+    background-color: #000000;
+    border-radius: 5px;
+    border: solid 3px black;
+    align-content: center;
+    justify-content: center;
+    min-width: fit-content;
+}
+.form-objects{
+    margin: 0px 20px;
+    min-width: fit-content;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-objects label {
+    min-width: fit-content;
+    margin-right:2%;
+    color: white;
+}
+
+.form-objects button {
+    padding: 10px 25px;
+    font-size: 22px;
+    border-radius: 30px ;
+    border: solid rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    font-weight: bold;
+    color: white;
+}
+
+.form-objects button:hover{
+    background-color: rgb(255, 255, 255);
+    font-weight: normal;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+.form-objects input{
+    padding: 3%;
+    border: solid black;
+    border-radius: 10px;
+}
+
+.form-objects select{
+    padding: 3%;
+    border: solid black;
+    border-radius: 10px;
+}
+
+/* FORM RESPONSIVENESS */
+@media (max-width:1210px) {
+    fieldset {
+        display: block;
+    }
+}
+
+@media (max-width:1270px) {
+    fieldset{
+        box-shadow: 0px 5px 10px black;
+    }
+}
+
+/* SECTION 2 VEHICLE SELECTION */
+#section2 {
+    background-color: white;
+    height: 700px;
+    position: inherit;
+}
+
+#section2-header {
+    margin:0 auto;
+    width: fit-content;
+    height: fit-content;
+    padding-top: 1.2em;
+}
+
+#car-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 270px);
+    gap: 100px;
+    justify-content: center;
+}
+
+#car-container {
+    box-shadow: -3px -3px 8px rgb(83, 83, 83), 3px 3px 8px rgb(83, 83, 83);
+    padding: 10px;
+    width: max-content;
+    height: max-content;
+    border-radius: 5px;
+}
+
+#car-image {
+    width:250px;
+    height: 300px;
+}
+
+.car-price-spacing {
+    margin: 10px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#book-now {
+    padding: 6px 15px;
+    font-size: 18px;
+    border-radius: 30px ;
+    border: solid rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+#book-now:hover {
+    background-color: rgb(0, 0, 0);
+    font-weight: normal;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+#section3 {
+    background-image:url("images/get-in.jpg");
+    background-repeat: no-repeat;
+    height: 700px;
 }
